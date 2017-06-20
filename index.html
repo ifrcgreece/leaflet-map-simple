@@ -58,7 +58,7 @@ var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}
   /* Upload Latitude/Longitude markers from ctp_map.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
    var customLayer = L.geoJson(null, {
   onEachFeature: function(feature, layer) {
-      layer.bindPopup(feature.properties.title);
+      layer.bindPopup(title);
     }
    });
    var runLayer = omnivore.csv('ctp_map.csv', null, customLayer)
