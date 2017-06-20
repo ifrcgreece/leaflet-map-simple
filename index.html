@@ -30,7 +30,7 @@
   /* Set up the map with initial center and zoom level */
   var map = L.map('map', {
     center: [37.991884, 23.768035], // EDIT latitude, longitude to re-center map
-    zoom: 7,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+    zoom: 6,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
     scrollWheelZoom: false
   });
 
@@ -56,16 +56,16 @@ var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}
   .bindPopup("Nea Kavala"); // EDIT pop-up text message
 
   /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
-  // var customLayer = L.geoJson(null, {
-  //  onEachFeature: function(feature, layer) {
-  //    layer.bindPopup(feature.properties.Title);
-  //  }
-  // });
-  // var runLayer = omnivore.csv('data.csv', null, customLayer)
-  // .on('ready', function() {
-  //  map.fitBounds(runLayer.getBounds());
-  // }).addTo(map);
-  // controlLayers.addOverlay(customLayer, 'Markers from data.csv');
+   var customLayer = L.geoJson(null, {
+  onEachFeature: function(feature, layer) {
+      layer.bindPopup(feature.properties.Title);
+    }
+   });
+   var runLayer = omnivore.csv('data.csv', null, customLayer)
+   .on('ready', function() {
+    map.fitBounds(runLayer.getBounds());
+   }).addTo(map);
+  controlLayers.addOverlay(customLayer, 'Markers from data.csv');
 
   </script>
 </body>
