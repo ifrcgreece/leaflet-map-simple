@@ -61,7 +61,7 @@ var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}
       layer.bindPopup(feature.properties.Title);
     }
    });
-   var runLayer = omnivore.csv('cto_map.csv', null, customLayer)
+   var runLayer = omnivore.csv('ctp_map.csv', null, customLayer)
    .on('ready', function() {
     map.fitBounds(runLayer.getBounds());
    }).addTo(map);
