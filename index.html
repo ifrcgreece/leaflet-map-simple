@@ -30,7 +30,7 @@
   /* Set up the map with initial center and zoom level */
   var map = L.map('map', {
     center: [37.991884, 23.768035], // EDIT latitude, longitude to re-center map
-    zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+    zoom: 18,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
     scrollWheelZoom: false
   });
 
@@ -53,8 +53,8 @@
   // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
 
   /* Display a blue point marker with pop-up text */
-  L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
-  .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
+  L.marker([40.990659, 22.626591]).addTo(map) // EDIT latitude, longitude to re-position marker
+  .bindPopup("Nea Kavala"); // EDIT pop-up text message
 
   /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
   // var customLayer = L.geoJson(null, {
