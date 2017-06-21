@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
-<img src="Logo_ifrc.png" width=200 height=200>
-
   <head>
   <title>leaflet-map-simple</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-
   
   <!-- Load Leaflet code library - see updates at http://leafletjs.com/download.html -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
@@ -54,8 +51,8 @@ var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}
 }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
  controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
 
-  /* Display a red point marker with pop-up text */
-  L.marker([40.990659, 22.626591]).addTo(map) // EDIT latitude, longitude to re-position marker
+  /* Display a blue point marker with pop-up text */
+  L.marker([40.990659, 22.626591], {icon: greenIcon}).addTo(map) // EDIT latitude, longitude to re-position marker
   .bindPopup("Nea Kavala"); // EDIT pop-up text message
 
   /* Upload Latitude/Longitude markers from ctp_map.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
