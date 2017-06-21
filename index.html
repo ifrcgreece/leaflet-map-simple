@@ -74,7 +74,7 @@ var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}
     }
    });
    var runLayer = omnivore.csv('health.csv', null, customLayer)
-   .on('ready', function() {
+   .off('ready', function() {
     map.fitBounds(runLayer.getBounds());
    }).addTo(map);
   controlLayers.addOverlay(customLayer, 'Markers from health.csv');
