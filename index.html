@@ -52,7 +52,7 @@ var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}
  controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
 
   /* Display a red point marker with pop-up text */
-  L.marker([40.990659, 22.626591]).openOn(map) // EDIT latitude, longitude to re-position marker
+  L.marker([40.990659, 22.626591]).addTo(map) // EDIT latitude, longitude to re-position marker
   .bindPopup("Nea Kavala"); // EDIT pop-up text message
 
   /* Upload Latitude/Longitude markers from ctp_map.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
